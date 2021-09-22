@@ -1,6 +1,4 @@
 import * as Router from 'koa-router'
-import Axios from 'axios'
-import { get } from 'lodash'
 const bodyParser = require('koa-bodyparser')
 
 export const router = new Router()
