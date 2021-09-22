@@ -5,6 +5,4 @@ export const router = new Router()
 
 router.use([bodyParser()])
 
-router.get('/test', async ctx => {
-  ctx.body = 'OK'
-})
+router.get('/', ctx => (ctx.body = 'PASSED'))
