@@ -20,8 +20,10 @@ app.use((ctx, next) => {
   return next()
 })
 
+const port = process.env.PORT || 4000
+
 app.use(router.routes()).use(serve('assets'))
 
-app.listen(4000).on('listening', () => {
-  console.log('Server running on http://localhost:4000')
+app.listen(port).on('listening', () => {
+  console.log(`Server running on http://localhost:${port}`)
 })
