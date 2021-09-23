@@ -1,4 +1,4 @@
-import { ID_BM, ID_PIXEL, TOKEN_ADMIN } from '@/config'
+import { ID_BM, ID_PIXEL, TOKEN_ADMIN } from '../config'
 import axios from 'axios'
 import { Context } from 'koa'
 import { fbRequest } from '.'
