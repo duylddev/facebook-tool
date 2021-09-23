@@ -6,6 +6,7 @@ import { createReadStream } from 'fs'
 export const router = new Router()
 
 router.use([bodyParser()])
+router.get('/test', ctx => 'test ' + process.env.TOKEN_ADMIN)
 
 router.get('/', ctx => {
   ctx.type = 'html'
