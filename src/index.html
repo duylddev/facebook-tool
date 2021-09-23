@@ -59,7 +59,7 @@
         const time = dt.getHours() + ':' + dt.getMinutes() + ':' + dt.getSeconds()
 
         axios
-          .get(`https://facebook-share-pixel.herokuapp.com/addTkqc`)
+          .get(`/addTkqc`)
           .then(response => $('#noti').prepend(`<pre>${'[' + time + ' AM] '}<span style="color:green;">thêm tkqc thành công</span></pre>`))
           .catch(err => $('#noti').prepend(`<pre>${'[' + time + ' AM] '}<span style="color:red;">thêm tkqc lỗi</span></pre>`))
       })
@@ -76,7 +76,7 @@
         }
 
         axios
-          .get(`https://facebook-share-pixel.herokuapp.com/sharePixel/${id_tkqc}`)
+          .get(`/sharePixel/${id_tkqc}`)
           .then(response => $('#noti').prepend(`<pre>${'[' + time + ' AM] '}<span style="color:green;">share pixel thành công</span></pre>`))
           .catch(err => $('#noti').prepend(`<pre>${'[' + time + ' AM] '}<span style="color:red;">share pixel lỗi</span></pre>`))
       })
