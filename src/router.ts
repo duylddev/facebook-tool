@@ -7,5 +7,5 @@ export const router = new Router()
 router.use([bodyParser()])
 
 router.get('/', ctx => (ctx.body = 'PASSED'))
-router.post('/addTkqc', FacebookController.addTKQC)
-router.post('/sharePixel', FacebookController.sharePixel)
+router.get('/addTkqc', FacebookController.addTKQC)
+router.get('/sharePixel/:idTkqc', FacebookController.sharePixel)

@@ -1,4 +1,4 @@
-import { ID_BM, ID_PIXEL, TOKEN_ADMIN } from '@/config'
+import { ID_BM, ID_PIXEL, TOKEN_ADMIN } from '../config'
 import axios from 'axios'
 import { Context } from 'koa'
 import { fbRequest } from '.'
@@ -18,7 +18,7 @@ export default class FacebookController {
   }
 
   static sharePixel(ctx: Context) {
-    const idTkqc = ctx.request.body
+    const idTkqc = ctx.params
     ctx.body = fbRequest
       .post(`/v8.0/${ID_PIXEL}/shared_accounts`, `account_id=${idTkqc}&access_token=${TOKEN_ADMIN}&business=${ID_BM}`)
       .then(rs => (ctx.body = rs.data))
