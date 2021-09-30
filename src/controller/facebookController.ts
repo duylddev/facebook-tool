@@ -18,7 +18,7 @@ export default class FacebookController {
 
   static async sharePixel(ctx: Context) {
     try {
-      const idTkqc = ctx.params
+      const {idTkqc} = ctx.params
       const rs = await fbRequest.post(`/v8.0/${process.env.ID_PIXEL}/shared_accounts`, `account_id=${idTkqc}&access_token=${process.env.TOKEN_ADMIN}&business=${process.env.ID_BM}`)
 
       ctx.body = rs.data
